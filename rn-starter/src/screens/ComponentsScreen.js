@@ -1,8 +1,8 @@
 import React from 'react';
-import { Text, Stylesheet } from 'react-native';
+import { Text, StyleSheet } from 'react-native';
 
 
-const styles = Stylesheet.create({
+const styles = StyleSheet.create({
     textStyle: {
         fontSize: 30
     }
