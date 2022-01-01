@@ -10,9 +10,11 @@ const styles = StyleSheet.create({
 
 const HomeScreen = ({ navigation }) => {
 
-  const navigateToComponentsDemo = () => navigation.navigate("Components");
+  const navigateToComponentsDemo = () => navigation.navigate('Components');
 
-  const navigateToListDemo = () => navigation.navigate("List");
+  const navigateToListDemo = () => navigation.navigate('List');
+
+  const navigateToImageDemo = () => navigation.navigate('Image');
 
   return (
 
@@ -21,17 +23,22 @@ const HomeScreen = ({ navigation }) => {
       <Text style={styles.text}>HiThere!</Text>
 
       {/* button primitive component */}
+      {/* components demo */}
       <Button 
         title="Go to Components Demo" 
         onPress={() => navigateToComponentsDemo()} />
 
-      {/* touchable opacity component - much more extensible */}
+      {/* touchable opacity component is much more extensible than <Button> ! */}
       {/* allows multiple child elements! (eg icon & text, etc) */}
-      <TouchableOpacity onPress={() => navigateToListDemo()}>
+      {/* list demo */}
+      <Button 
+        title="Go to List Demo"
+        onPress={() => navigateToListDemo()} />
 
-        <Text>Go to List Demo</Text>
-
-      </TouchableOpacity>
+      {/* image demo */}
+      <Button 
+        title="Go to Image Demo"
+        onPress={() => navigateToImageDemo()} />
 
     </View>
 
