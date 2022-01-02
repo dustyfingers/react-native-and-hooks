@@ -12,11 +12,11 @@ const ImageScreen = () => {
 
         <View>
 
-            <ImageDetail title="forest" imageSrc={require("../../assets/images/forest.jpg")} />
+            <ImageDetail title="forest" imageSrc={require("../../assets/images/forest.jpg")} imageScore={3} />
 
-            <ImageDetail title="beach" imageSrc={require("../../assets/images/beach.jpg")} />
+            <ImageDetail title="beach" imageSrc={require("../../assets/images/beach.jpg")} imageScore={10} />
 
-            <ImageDetail title="mountain" imageSrc={require("../../assets/images/mountain.jpg")} />
+            <ImageDetail title="mountain" imageSrc={require("../../assets/images/mountain.jpg")} imageScore={6} />
 
         </View>
 
