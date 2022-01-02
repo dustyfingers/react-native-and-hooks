@@ -9,9 +9,7 @@ const ColorScreen = () => {
 
     const [colors, setColors] = useState([]);
 
-    const addNewColor = () => {
-        setColors([...colors, generateRandomRgb()]);
-    };
+    const addNewColor = () => setColors([...colors, generateRandomRgb()]);
 
     const generateRandomRgb = () => {
 
