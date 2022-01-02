@@ -18,7 +18,9 @@ const HomeScreen = ({ navigation }) => {
 
   const navigateToCounterDemo = () => navigation.navigate('Counter');
 
-  const navigateToColorDemo = () => navigation.navigate('Color');
+  const navigateToRandomColorDemo = () => navigation.navigate('RandomColor');
+
+  const navigateToColorSelectorDemo = () => navigation.navigate('ColorSelector');
 
   return (
 
@@ -51,8 +53,13 @@ const HomeScreen = ({ navigation }) => {
 
       {/* color demo */}
       <Button 
-        title="Go to Color Demo"
-        onPress={() => navigateToColorDemo()} />
+        title="Go to Random Color Demo"
+        onPress={() => navigateToRandomColorDemo()} />
+
+      {/* color selector demo */}
+      <Button 
+        title="Go to Color Selector Demo"
+        onPress={() => navigateToColorSelectorDemo()} />
 
     </View>
 
