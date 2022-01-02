@@ -18,11 +18,13 @@ const HomeScreen = ({ navigation }) => {
 
   const navigateToCounterDemo = () => navigation.navigate('Counter');
 
+  const navigateToColorDemo = () => navigation.navigate('Color');
+
   return (
 
     <View>
 
-      <Text style={styles.text}>HiThere!</Text>
+      {/* <Text style={styles.text}>HiThere!</Text> */}
 
       {/* button primitive component */}
       {/* components demo */}
@@ -46,6 +48,11 @@ const HomeScreen = ({ navigation }) => {
       <Button 
         title="Go to Counter Demo"
         onPress={() => navigateToCounterDemo()} />
+
+      {/* color demo */}
+      <Button 
+        title="Go to Color Demo"
+        onPress={() => navigateToColorDemo()} />
 
     </View>
 
