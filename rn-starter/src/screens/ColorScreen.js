@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, StyleSheet, Button } from 'react-native';
+import { FlatList } from 'react-native-gesture-handler';
 
 
 const styles = StyleSheet.create({});
 
 const ColorScreen = () => {
+
+    const [colors, setColors] = useState([]);
+
+    const addNewColor = () => {
+        setColors([...colors, generateRandomRgb()]);
+    };
 
     const generateRandomRgb = () => {
 
@@ -22,11 +29,15 @@ const ColorScreen = () => {
 
             <Button 
                 title="Add Color"
-                onPress={generateRandomRgb} />
+                onPress={addNewColor} />
 
-            <View style={{ height: 100, width: 100, backgroundColor: generateRandomRgb() }}>
-
-            </View>
+            <FlatList 
+                keyExtractor={color => color}
+                data={colors} 
+                renderItem={color => (
+                    <View style={{ height: 100, width: 100, backgroundColor: generateRandomRgb() }}>
+                    </View>
+                )}/>
 
         </View>
     );
