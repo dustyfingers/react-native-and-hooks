@@ -16,6 +16,8 @@ const HomeScreen = ({ navigation }) => {
 
   const navigateToImageDemo = () => navigation.navigate('Image');
 
+  const navigateToCounterDemo = () => navigation.navigate('Counter');
+
   return (
 
     <View>
@@ -39,6 +41,11 @@ const HomeScreen = ({ navigation }) => {
       <Button 
         title="Go to Image Demo"
         onPress={() => navigateToImageDemo()} />
+
+      {/* counter demo */}
+      <Button 
+        title="Go to Counter Demo"
+        onPress={() => navigateToCounterDemo()} />
 
     </View>
 
