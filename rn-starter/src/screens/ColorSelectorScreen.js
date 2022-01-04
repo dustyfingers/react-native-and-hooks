@@ -11,17 +11,17 @@ const styles = StyleSheet.create({});
 
 const reducer = (state, action) => {
     
-    switch (action.color) 
+    switch (action.type) 
     {
 
-        case 'red':
-            return {...state, red: clamp(state.red + action.amount, 0 , 255)};
+        case 'change_red':
+            return {...state, red: clamp(state.red + action.payload, 0 , 255)};
 
-        case 'green':
-            return {...state, green: clamp(state.green + action.amount, 0 , 255)};
+        case 'change_green':
+            return {...state, green: clamp(state.green + action.payload, 0 , 255)};
 
-        case 'blue':
-            return {...state, blue: clamp(state.blue + action.amount, 0 , 255)};
+        case 'change_blue':
+            return {...state, blue: clamp(state.blue + action.payload, 0 , 255)};
 
         default:
             return state;
@@ -76,18 +76,18 @@ const ColorSelectorScreen = () => {
 
             <ColorCounter 
                 color="Red" 
-                handleIncrease={() => dispatch({color: 'red', amount: COLOR_INCREMENT})}
-                handleDecrease={() => dispatch({color: 'red', amount: COLOR_INCREMENT * -1})} />
+                handleIncrease={() => dispatch({type: 'change_red', payload: COLOR_INCREMENT})}
+                handleDecrease={() => dispatch({type: 'change_red', payload: -1 * COLOR_INCREMENT})} />
 
             <ColorCounter 
                 color="Green" 
-                handleIncrease={() => dispatch({color: 'green', amount: COLOR_INCREMENT})}
-                handleDecrease={() => dispatch({color: 'green', amount: COLOR_INCREMENT * -1})} />
+                handleIncrease={() => dispatch({type: 'change_green', payload: COLOR_INCREMENT})}
+                handleDecrease={() => dispatch({type: 'change_green', payload: -1 * COLOR_INCREMENT})} />
 
             <ColorCounter 
                 color="Blue"
-                handleIncrease={() => dispatch({color: 'blue', amount: COLOR_INCREMENT})}
-                handleDecrease={() =>dispatch({color: 'blue', amount: COLOR_INCREMENT * -1})} />
+                handleIncrease={() => dispatch({type: 'change_blue', payload: COLOR_INCREMENT})}
+                handleDecrease={() =>dispatch({type: 'change_blue', payload: -1 * COLOR_INCREMENT})} />
 
             <View style={{ width: 150, height: 150, backgroundColor: `rgb(${state.red}, ${state.green}, ${state.blue})`}}/>
 
