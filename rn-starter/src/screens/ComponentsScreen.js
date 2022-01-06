@@ -1,6 +1,7 @@
 import React from 'react';
 import { Text, StyleSheet, View } from 'react-native';
 
+// TODO: style this screen
 
 const styles = StyleSheet.create({
     headerStyle: {

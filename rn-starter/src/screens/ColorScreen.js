@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { View, StyleSheet, Button } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
 
+// TODO: style this screen
 
 const styles = StyleSheet.create({});
 

@@ -2,6 +2,8 @@ import React from 'react';
 import { Text, StyleSheet, View, Button, TouchableOpacity } from 'react-native';
 
 
+// TODO: style this screen
+
 const styles = StyleSheet.create({
   text: {
     fontSize: 30,
@@ -21,6 +23,8 @@ const HomeScreen = ({ navigation }) => {
   const navigateToRandomColorDemo = () => navigation.navigate('RandomColor');
 
   const navigateToColorSelectorDemo = () => navigation.navigate('ColorSelector');
+
+  const navigateToTextInputDemo = () => navigation.navigate('TextInput');
 
   return (
 
@@ -60,6 +64,11 @@ const HomeScreen = ({ navigation }) => {
       <Button 
         title="Go to Color Selector Demo"
         onPress={() => navigateToColorSelectorDemo()} />
+
+      {/* text input demo */}
+      <Button 
+        title="Go to Text Input Demo"
+        onPress={() => navigateToTextInputDemo()} />
 
     </View>
 

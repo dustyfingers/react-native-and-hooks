@@ -4,6 +4,8 @@ import { View, Text, StyleSheet } from 'react-native';
 import ImageDetail from '../components/ImageDetail';
 
 
+// TODO: style this screen
+
 const styles = StyleSheet.create({});
 
 const ImageScreen = () => {

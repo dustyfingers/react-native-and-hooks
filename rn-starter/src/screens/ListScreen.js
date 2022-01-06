@@ -3,6 +3,8 @@ import { View, Text, StyleSheet } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
 
 
+// TODO: style this screen
+
 const styles = StyleSheet.create({
     textStyle: {
         marginVertical: 10

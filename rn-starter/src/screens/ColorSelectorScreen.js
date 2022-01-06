@@ -7,6 +7,8 @@ import { clamp } from '../helpers/tools';
 
 const COLOR_INCREMENT = 20;
 
+
+// TODO: style this screen
 const styles = StyleSheet.create({});
 
 const reducer = (state, action) => {
