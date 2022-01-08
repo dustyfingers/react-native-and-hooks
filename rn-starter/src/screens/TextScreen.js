@@ -15,9 +15,13 @@ const styles = StyleSheet.create({
 const TextScreen = () => {
 
     const [text, setText] = useState('');
+    const [error, setError] = useState(false);
 
     // check for proper state change 
-    useEffect(() => console.log(text), [text]);
+    useEffect(() => {
+        if (text.length && text.length < 5 && !error) setError(true);
+        else if (text.length >= 5 || !text.length) setError(false);
+    }, [text]);
 
     return (
 
@@ -27,6 +31,8 @@ const TextScreen = () => {
             {/* by default on ios, the first letter of an input is capitalized! the autoCapitalize prop prevents this behavior */}
             {/* autoCorrect=false prevents the smae but with auto correct */}
 
+            <Text>Enter Password:</Text>
+            
             <TextInput 
                 autoCapitalize='none'
                 autoCorrect={false}
@@ -34,7 +40,7 @@ const TextScreen = () => {
                 value={text}
                 onChangeText={val => setText(val)} />
 
-            <Text>{text}</Text>
+            <Text>{error ? 'Entered password must be longer than 5 characters.' : ''}</Text>
 
         </View>
 
