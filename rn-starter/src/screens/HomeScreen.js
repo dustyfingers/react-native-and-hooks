@@ -26,6 +26,8 @@ const HomeScreen = ({ navigation }) => {
 
   const navigateToTextInputDemo = () => navigation.navigate('TextInput');
 
+  const navigateToBoxModelDemo = () => navigation.navigate('BoxModel');
+
   return (
 
     <View>
@@ -69,6 +71,11 @@ const HomeScreen = ({ navigation }) => {
       <Button 
         title="Go to Text Input Demo"
         onPress={() => navigateToTextInputDemo()} />
+
+      {/* box model demo */}
+      <Button 
+        title="Go to Box Model Demo"
+        onPress={() => navigateToBoxModelDemo()} />
 
     </View>
 

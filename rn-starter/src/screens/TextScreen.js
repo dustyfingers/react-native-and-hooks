@@ -39,8 +39,9 @@ const TextScreen = () => {
                 style={styles.input}
                 value={text}
                 onChangeText={val => setText(val)} />
-
-            <Text>{error ? 'Entered password must be longer than 5 characters.' : ''}</Text>
+            
+            {/* null is a valid value in react native */}
+            {error ? <Text>Entered password must be at least 5 characters.</Text> : null}
 
         </View>
 
