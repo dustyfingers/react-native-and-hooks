@@ -18,7 +18,12 @@ const styles = StyleSheet.create({
         borderColor: 'red'
     },
     textTwoStyle: {
-        alignSelf: 'center',
+        // alignSelf: 'center',
+        // siblings ignore this element now bc of position: 'absolute'
+        // some flexbox properties dont work on it now - eg alignItems: 'stretch' on parent
+        position: 'absolute',
+        left: -20,
+        top: 30,
         flex: 1,
         borderWidth: 1,
         borderColor: 'red'
