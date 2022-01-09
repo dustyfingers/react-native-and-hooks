@@ -21,9 +21,20 @@ const styles = StyleSheet.create({
         // alignSelf: 'center',
         // siblings ignore this element now bc of position: 'absolute'
         // some flexbox properties dont work on it now - eg alignItems: 'stretch' on parent
-        position: 'absolute',
-        left: -20,
-        top: 30,
+        
+        // position: 'absolute',
+        // 0 distance from top left bottom and right of parent container
+        // top: 0,
+        // left: 0,
+        // right: 0,
+        // bottom: 0,
+
+        // this object has the five props above.. eg does the same thing
+        ...StyleSheet.absoluteFillObject,
+        padding: 10,
+
+        // left: -20,
+        // top: 30,
         flex: 1,
         borderWidth: 1,
         borderColor: 'red'
